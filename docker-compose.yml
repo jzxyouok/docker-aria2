@@ -1,0 +1,14 @@
+version: '2'
+services:
+    aira2:
+        image: xujinkai/aria2-with-webui
+        ports:
+            - "6800:6800"
+            - "6880:80"
+            - "6888:8080"
+        volumes:
+            - ./download:/data
+            - ./conf:/conf
+        environment:
+            - SECRET=
+
